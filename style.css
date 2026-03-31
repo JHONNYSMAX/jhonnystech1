@@ -1,0 +1,342 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI', sans-serif;
+background:#0a0f1c;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* FUNDO ANIMADO */
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+background: radial-gradient(circle, #0f172a, #020617);
+}
+
+/* HEADER */
+.topo{
+background:rgba(10,15,28,0.8);
+backdrop-filter:blur(10px);
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(0,188,212,0.2);
+}
+
+.logo img{
+width:180px;
+}
+
+.menu ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.menu a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#00bcd4;
+}
+
+/* SCROLL SUAVE */
+html{
+scroll-behavior:smooth;
+}
+
+/* SEÇÕES */
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+/* TITULOS */
+h2{
+font-size:34px;
+margin-bottom:30px;
+position:relative;
+}
+
+h2::after{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#00bcd4;
+margin:10px auto;
+}
+
+/* GRID GLOBAL */
+.servicos-container,
+.porque-container,
+.parcerias-container,
+.clientes-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+/* CARDS (EFEITO GLASS) */
+.servico,
+.diferencial,
+.parceria,
+.cliente-logo{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:12px;
+transition:0.4s;
+}
+
+.servico:hover,
+.diferencial:hover,
+.parceria:hover,
+.cliente-logo:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(0,188,212,0.4);
+}
+
+/* IMAGENS PADRÃO */
+.servico img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* TEXTOS */
+.servico h3,
+.parceria h3,
+.diferencial h3{
+color:#00bcd4;
+margin-bottom:10px;
+}
+
+p{
+color:#ccc;
+}
+
+/* CAPA */
+.capa{
+padding:140px 20px;
+}
+
+/* TITULO */
+.titulo-tech{
+  background: linear-gradient(90deg,#00bcd4,#1ebe5d,#00bcd4);
+  background-size:200%;
+
+  background-clip: text;              /* padrão */
+  -webkit-background-clip: text;      /* compatibilidade */
+
+  color: transparent;                 /* padrão */
+  -webkit-text-fill-color: transparent; /* compatibilidade */
+}
+
+@keyframes brilho{
+0%{background-position:0%;}
+100%{background-position:200%;}
+}
+
+/* BOTÃO */
+.btn-whatsapp{
+display:inline-block;
+margin-top:20px;
+background:#25D366;
+padding:14px 30px;
+border-radius:8px;
+color:#fff;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+transform:scale(1.05);
+background:#1ebe5d;
+}
+
+/* CLIENTES LOGOS */
+.cliente-logo{
+display:flex;
+align-items:center;
+justify-content:center;
+height:120px;
+}
+
+.cliente-logo img{
+max-width:100%;
+max-height:100%;
+}
+
+/* CONTATO */
+.contato-box{
+max-width:500px;
+margin:40px auto;
+padding:30px;
+border-radius:15px;
+
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+
+display:flex;
+flex-direction:column;
+gap:20px;
+text-align:center;
+}
+
+/* INFORMAÇÕES */
+.contato-info p{
+color:#ccc;
+margin:5px 0;
+}
+
+/* FORMULÁRIO */
+.contato-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contato-form input,
+.contato-form textarea{
+padding:12px;
+border-radius:8px;
+border:none;
+outline:none;
+}
+
+/* BOTÃO */
+.contato-form button{
+background:#00bcd4;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contato-form button:hover{
+background:#0097a7;
+transform:scale(1.05);
+}
+
+.contato-info i{
+color:#00bcd4;
+margin-right:8px;
+}
+
+.contato-box{
+opacity:0;
+transform:translateY(40px);
+animation:aparecer 1s ease forwards;
+}
+
+@keyframes aparecer{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#statusMensagem{
+margin-top:10px;
+font-size:14px;
+color:#00bcd4;
+opacity:0;
+transition:0.3s;
+}
+
+#statusMensagem.ativo{
+opacity:1;
+}
+
+/* STATUS */
+#statusMensagem{
+margin-top:10px;
+font-size:14px;
+opacity:0;
+transition:0.3s;
+}
+
+#statusMensagem.sucesso{
+color:#22c55e;
+opacity:1;
+}
+
+#statusMensagem.erro{
+color:#ef4444;
+opacity:1;
+}
+
+/* BOTÃO DESABILITADO */
+button:disabled{
+opacity:0.6;
+cursor:not-allowed;
+}
+
+/* ANIMAÇÃO CHECK */
+.sucesso-animado{
+animation:pop 0.4s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(0.8);}
+100%{transform:scale(1);}
+}
+
+/* BOTÃO WHATSAPP */
+#btnWhats{
+display:block;
+margin-top:10px;
+text-align:center;
+}
+
+/* CTA FINAL */
+.ajuda{
+background:linear-gradient(135deg,#00bcd4,#020617);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+.menu ul{
+flex-direction:column;
+gap:10px;
+}
+
+.contato-container{
+grid-template-columns:1fr;
+}
+
+.logo img{
+width:140px;
+}
+
+}
