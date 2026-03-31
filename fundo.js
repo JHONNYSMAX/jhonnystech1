@@ -15,3 +15,4 @@ links.forEach(link => {
     toggle.classList.remove("ativo");
   });
 });
+
