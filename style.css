@@ -63,6 +63,14 @@ html{
 scroll-behavior:smooth;
 }
 
+.titulo-tech img{
+width:100%;
+max-width:500px;
+height:auto;
+display:block;
+margin:0 auto;
+}
+
 /* SEÇÕES */
 section{
 padding:100px 20px;
