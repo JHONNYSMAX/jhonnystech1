@@ -77,6 +77,14 @@ margin:0 auto;
 max-width:280px;
 }
 
+@media(max-width:480px){
+
+.titulo-tech img{
+max-width:220px;
+}
+
+}
+
 }
 
 /* SEÇÕES */
