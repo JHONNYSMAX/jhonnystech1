@@ -192,11 +192,7 @@
        <button type="submit" id="btnEnviar">Enviar Mensagem</button>
 
     <!-- BOTÃO WHATSAPP -->
-       <a id="btnWhats" target="_blank" class="btn-whatsapp"></a>
-       <p id="statusMensagem"></p>
-       <a id="btnWhats" target="_blank" class="btn-whatsapp">
-        Falar no WhatsApp
-        </a>
+       <a href="https://wa.me/5561983453984" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
 
      </form>
 
@@ -211,9 +207,6 @@
   </p>
 </footer>
   
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="js/form.js"></script>
-
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="js/form.js"></script>
 
@@ -236,10 +229,19 @@ particlesJS("particles-js", {
 <script>
 const toggle = document.getElementById("menuToggle");
 const menu = document.getElementById("menuList");
+const links = document.querySelectorAll("#menuList a");
 
 toggle.addEventListener("click", () => {
   toggle.classList.toggle("ativo");
   menu.classList.toggle("ativo");
+});
+
+// 🔥 FECHAR MENU AO CLICAR
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("ativo");
+    toggle.classList.remove("ativo");
+  });
 });
 </script>
 </body>
