@@ -54,6 +54,24 @@ font-weight:600;
 transition:0.3s;
 }
 
+@media(max-width:768px){
+
+.menu ul{
+display:none;
+}
+
+.menu ul.ativo{
+display:flex;
+flex-direction:column;
+}
+
+.menu-toggle{
+display:block;
+color:#fff;
+}
+
+}
+
 .menu a:hover{
 color:#00bcd4;
 }
