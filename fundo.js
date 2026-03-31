@@ -14,5 +14,11 @@ links.forEach(link => {
     menu.classList.remove("ativo");
     toggle.classList.remove("ativo");
   });
+document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+    menu.classList.remove("ativo");
+    toggle.classList.remove("ativo");
+  }
+});
 });
 
