@@ -300,6 +300,9 @@ background:#1ebe5d;
 }
 
 /* CLIENTES LOGOS */
+.cliente-logo:hover img {
+  transform: scale(1.15);
+}
 /* padrão (todas brancas) */
 .cliente-logo img {
   filter: brightness(0) invert(1);
