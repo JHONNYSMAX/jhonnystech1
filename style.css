@@ -300,6 +300,9 @@ background:#1ebe5d;
 }
 
 /* CLIENTES LOGOS */
+.cliente-logo img {
+  filter: grayscale(100%) brightness(0) invert(1);
+}
 .cliente-logo {
   display: flex;
   align-items: center;
