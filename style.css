@@ -84,6 +84,9 @@ max-width:220px;
 }
 
 }
+.titulo-tech img{
+filter: drop-shadow(0 0 15px rgba(0,188,212,0.5));
+}
 
 }
 
