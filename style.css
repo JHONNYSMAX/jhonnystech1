@@ -122,7 +122,21 @@ font-size:28px;
 cursor:pointer;
 }
 
-/* MOBILE MENU */
+/* BOTÃO HAMBURGUER */
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MENU DESKTOP */
+.menu ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+/* MOBILE */
 @media(max-width:768px){
 
 .menu ul{
