@@ -1,14 +1,17 @@
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    color: { value: "#00bcd4" },
-    shape: { type: "circle" },
-    opacity: { value: 0.5 },
-    size: { value: 3 },
-    move: { speed: 2 },
-    line_linked: {
-      enable: true,
-      color: "#00bcd4"
-    }
-  }
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menuList");
+const links = document.querySelectorAll("#menuList a");
+
+// abrir / fechar menu
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("ativo");
+  menu.classList.toggle("ativo");
+});
+
+// 🔥 FECHAR AO CLICAR EM UM LINK
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("ativo");
+    toggle.classList.remove("ativo");
+  });
 });
