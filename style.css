@@ -122,13 +122,6 @@ font-size:28px;
 cursor:pointer;
 }
 
-/* BOTÃO HAMBURGUER */
-.menu-toggle{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
 /* MENU DESKTOP */
 .menu ul{
 display:flex;
