@@ -300,35 +300,37 @@ background:#1ebe5d;
 }
 
 /* CLIENTES LOGOS */
+.cliente-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+
+  border-radius: 10px;
+  transition: 0.3s;
+}
 
 .cliente-logo img {
   max-width: 100%;
   max-height: 100%;
-  
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: 0.3s;
+
+  filter: brightness(0) invert(1); /* deixa branco */
+  opacity: 0.7;
+
+  transition: all 0.3s ease;
 }
 
-.cliente-logo img:hover {
+/* HOVER */
+.cliente-logo:hover img {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-.cliente-logo {
-  background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(8px);
-}
-.cliente-logo{
-display:flex;
-align-items:center;
-justify-content:center;
-height:120px;
-}
-
-.cliente-logo img{
-max-width:100%;
-max-height:100%;
+.cliente-logo:hover {
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
 }
 
 /* CONTATO */
