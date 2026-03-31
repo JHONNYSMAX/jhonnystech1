@@ -55,21 +55,15 @@ transition:0.3s;
 }
 
 @media(max-width:768px){
-
-.menu ul{
-display:none;
+  .titulo-tech img{
+    max-width:280px;
+  }
 }
 
-.menu ul.ativo{
-display:flex;
-flex-direction:column;
-}
-
-.menu-toggle{
-display:block;
-color:#fff;
-}
-
+@media(max-width:480px){
+  .titulo-tech img{
+    max-width:220px;
+  }
 }
 
 .menu a:hover{
